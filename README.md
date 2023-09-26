@@ -1,5 +1,5 @@
 Integrantes:
-Luis Oses - luisosespro123@gmail.com - 43909208
+Luis Oses - luisosespro123@gmail.com - 43909208 /
 Julieta Carelli - julicarelli1@gmail.com - 40009561
 
 Temática: Películas.
