@@ -1,0 +1,28 @@
+<?php require './templates/header.phtml' ?>
+
+<div>
+<?php 
+
+    foreach ($directores as $director) {
+        ?>
+            <button><a href="peliculas?filtro=<?=$director->id?>"> <?=$director->nombre?> </a></button>
+        <?php
+    }
+?>
+</div>
+
+<ul class="list-group list-group-item-info">
+    <?php foreach ($peliculas as $pelicula) : ?>
+        <li class="list-group-item list-group-item-action list-group-item-info">
+            <div>
+                <b> <?= substr($pelicula->titulo, 0, 25) ?> | <?= $pelicula->director ?> </b>
+                <button><a href="formPeliculas/<?= $pelicula->id ?>">Editar</a></button>
+                <button><a href="peliculas/<?= $pelicula->id ?>">Ver</a></button>
+            </div>
+        </li>
+    <?php endforeach ?>
+</ul>
+
+<p class="mt-3"><small>Mostrando <?= count($peliculas) ?> peliculas</small></p>
+
+<?php require './templates/footer.phtml' ?>

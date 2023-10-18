@@ -1,0 +1,16 @@
+<?php require './templates/header.phtml' ?>
+
+<ul class="list-group list-group-item-info">
+    <li class="list-group-item list-group-item-action list-group-item-info">
+        <div>
+            <b><?= $director->id ?></b> | <?=substr($director->nombre,0,25)?>
+            <button><a href="formDirectores/<?=$director->id?>">Editar</a></button>
+            <button><a href="directores">volver</a></button>
+            <button><a href="deleteDirector/<?=$director->id?>">Borrar</a></button>
+        </div>
+    </li>
+</ul>
+
+
+
+<?php require './templates/footer.phtml' ?>

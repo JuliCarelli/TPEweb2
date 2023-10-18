@@ -1,0 +1,26 @@
+<?php require 'templates/header.phtml' ?>
+
+<div class="mt-5 w-25 mx-auto">
+    <form method="POST" action='formPeliculas<?php if (isset($id)) { echo "/" . $id; } ?>'>
+        <input type="text" name="titulo" placeholder="Titulo">
+        <input type="text" name="genero" placeholder="Genero">
+        <input type="number" name="year" placeholder="Año">
+        <select name="director" id="">
+            <?php
+            foreach ($directores as $director) {
+            ?>
+            <option value="<?=$director->id?>"> <?=$director->nombre?></option>
+            <?php
+            }
+            ?>
+        </select>
+        <?php if (isset($id)) { ?>
+            <button type="submit" class="btn btn-primary mt-3">Modificar pelicula</button>
+        <?php
+        } else { ?>
+            <button type="submit" class="btn btn-primary mt-3">Agregar pelicula</button>
+        <?php } ?>
+    </form>
+</div>
+
+<?php require 'templates/footer.phtml' ?>

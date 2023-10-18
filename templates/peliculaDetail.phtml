@@ -1,0 +1,15 @@
+<?php require './templates/header.phtml' ?>
+
+<ul class="list-group list-group-item-info">
+    <li class="list-group-item list-group-item-action list-group-item-info">
+        <div>
+            <b><?= $pelicula->titulo ?></b> | <?=substr($pelicula->genero,0,25)?> |  <?= $pelicula->year ?> | <?= $pelicula->director ?>
+            <button><a href="formPeliculas/<?=$pelicula->id?>">Editar</a></button>
+            <button><a href="peliculas">volver</a></button>
+            <button><a href="deletePelicula/<?=$pelicula->id?>">Borrar</a></button>
+        </div>
+        
+    </li>
+</ul>
+
+<?php require './templates/footer.phtml' ?>
